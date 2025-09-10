@@ -1,0 +1,24 @@
+:root{--bg:#f7f8fb;--panel:#fff;--muted:#666}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:#111}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#2b6cb0;color:#fff}
+h1{margin:0;font-size:18px}
+main{display:flex;padding:16px;gap:12px}
+#leftCol,#rightCol{width:260px}
+#centerCol{flex:1;min-width:320px}
+.panel{background:var(--panel);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.authRow input{width:calc(100% - 4px);padding:8px;margin:6px 0}
+.authRow button{margin-right:6px;padding:8px}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+ul{list-style:none;padding:0;margin:8px 0}
+li{padding:6px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.messages{height:420px;overflow:auto;border:1px solid #eee;padding:8px;border-radius:6px;background:#fafafa}
+.message{padding:6px;border-radius:6px;margin:6px 0}
+.message.me{background:#dbeafe}
+.message.other{background:#fff}
+.compose{display:flex;gap:8px;margin-top:8px}
+.compose input{flex:1;padding:8px}
+button{cursor:pointer}
+.sub{font-weight:600;margin-top:8px}
+#roomMembersSelect{width:100%;height:80px}
