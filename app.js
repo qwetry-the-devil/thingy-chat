@@ -1,8 +1,21 @@
 // --- REPLACE THE CONFIG BELOW WITH YOUR FIREBASE CONFIG ---
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "REPLACE_ME",
-  authDomain: "REPLACE_ME",
-  projectId: "REPLACE_ME",
+  apiKey: "AIzaSyAzDG_Yx_VP9GRVEP3L9DNjME9f_8G6Prg",
+  authDomain: "thingy-chat.firebaseapp.com",
+  projectId: "thingy-chat",
+  storageBucket: "thingy-chat.firebasestorage.app",
+  messagingSenderId: "871089190686",
+  appId: "1:871089190686:web:04269ffbd1deccbdd7bb0f"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
   // optional fields:
   // storageBucket, messagingSenderId, appId
 };
