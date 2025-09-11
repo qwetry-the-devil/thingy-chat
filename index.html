@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thingy Chat (GitHub Pages + Firebase)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Thingy Chat</h1>
+      <div id="userBox">
+        <span id="userLabel">Not signed in</span>
+        <button id="signOutBtn" style="display:none">Sign out</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="authSection">
+        <h2>Sign in / Create account</h2>
+        <div class="authRow">
+          <input id="email" placeholder="Email" />
+          <input id="password" placeholder="Password" type="password" />
+          <button id="signupBtn">Create account</button>
+          <button id="signinBtn">Sign in</button>
+          <button id="anonBtn">Continue anonymously</button>
+          <div id="authMsg" class="small muted"></div>
+        </div>
+      </section>
+
+      <section id="mainUI" style="display:none">
+        <div id="leftCol">
+          <div class="panel">
+            <h3>Friends</h3>
+            <input id="friendEmail" placeholder="Friend's email" />
+            <button id="sendFriendReqBtn">Send friend request</button>
+            <div id="friendReqsHeader" class="sub">Requests</div>
+            <ul id="friendRequestsList"></ul>
+            <div class="sub">Friends</div>
+            <ul id="friendsList"></ul>
+          </div>
+
+          <div class="panel">
+            <h3>Rooms</h3>
+            <input id="roomName" placeholder="Room name (private)" />
+            <select id="roomMembersSelect" multiple></select>
+            <button id="createRoomBtn">Create room with selected friends</button>
+            <div class="sub">Your rooms</div>
+            <ul id="roomsList"></ul>
+          </div>
+        </div>
+
+        <div id="centerCol">
+          <div class="panel">
+            <h3 id="activeRoomTitle">Global Chat</h3>
+            <div id="messages" class="messages"></div>
+            <div class="compose">
+              <input id="msgInput" placeholder="Type a message..." />
+              <button id="sendMsgBtn">Send</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="rightCol">
+          <div class="panel">
+            <h3>Info</h3>
+            <p class="small muted">Use Email+Password to create a persistent account, or choose anonymous to join quickly. Anonymous accounts are fragile — if the user clears browser data or you don't link them to an email later, they can't sign back in.</p>
+            <p class="small muted">Moderation, spam protections and abuse handling are your responsibility — consider rate limits and moderation tools for production.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
